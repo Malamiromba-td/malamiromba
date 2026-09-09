@@ -1,55 +1,141 @@
-# Ibrahim Malamiromba — Personal Site
+# Ibrahim Malamiromba Personal Site
 
-Personal brand hub for Ibrahim Zubairu ("Malamiromba"), replacing the current
-redirect from malamiromba.com into TechInHausa. Built to the scope in the
-project proposal (Malamiromba Personal Site).
+This project serves as the central hub for a tech educator, bringing together courses, blog posts, and video lessons into one accessible platform. It helps users discover educational content originally scattered across multiple services, providing a unified gateway for booking workshops and exploring learning materials.
 
-## Stack
+## System Architecture
 
-- Next.js 14 (App Router) + TypeScript
-- Tailwind CSS
-- lucide-react for icons
+```mermaid
+flowchart LR
+  Client["Web Client"]
+  Frontend["Next.js Application"]
+  Sanity[("Sanity CMS")]
+  TathAPI["TathSchool API"]
 
-## Getting started
+  Client --> Frontend
+  Frontend --> Sanity
+  Frontend --> TathAPI
 
+  style Client fill:#1e1b4b,stroke:#6366f1,stroke-width:2px,color:#fff
+  style Frontend fill:#1e1b4b,stroke:#6366f1,stroke-width:2px,color:#fff
+  style Sanity fill:#022c22,stroke:#10b981,stroke-width:2px,color:#fff
+  style TathAPI fill:#2e1065,stroke:#8b5cf6,stroke-width:2px,color:#fff
+```
+
+## Getting Started
+
+Follow these instructions to set up the project locally.
+
+### Installation
+
+Clone the Repository:
+```bash
+git clone https://github.com/Malamiromba-td/malamiromba.git
+cd malamiromba
+```
+
+Install dependencies:
 ```bash
 npm install
+```
+
+Configure your local environment variables by copying the example file:
+```bash
+cp .env.example .env.local
+```
+
+Start the local development server:
+```bash
 npm run dev
 ```
 
-Open http://localhost:3000.
+## Usage
 
-## What's here
+Once the development server is running, open your web browser and navigate to the application.
 
-- `app/layout.tsx` — fonts (Archivo Black for the display wordmark, Inter for
-  body text) and page metadata.
-- `app/page.tsx` — homepage entry point.
-- `components/Hero.tsx` — the 50/50 split-screen hero: bio + social row on the
-  left, full-bleed portrait placeholder on the right. Stacks full-width on
-  mobile (content first, portrait below), per the responsive requirement.
-- `components/NavOverlay.tsx` — the full-screen nav menu, triggered by the
-  hamburger button in the hero. Slides down/fades in — the one deliberate
-  motion moment on the page.
-- `components/SocialRow.tsx` — shared social icon row (X, YouTube, LinkedIn,
-  GitHub, Instagram) used in both the hero and the nav overlay.
-- `tailwind.config.ts` — the project's color tokens (`indigo-deep`,
-  `indigo-mid`, `ochre`, `cream`, `ink`, `muted`, `hairline`).
+```bash
+http://localhost:3000
+```
 
-## Still placeholder / not yet wired up
+Use the sliding navigation menu triggered by the hamburger icon to browse different sections, such as the blog, courses, or contact pages. The application will fetch the latest educational materials from external APIs on demand.
 
-- **Portrait photo** — swap the placeholder block in `Hero.tsx` for a real
-  `next/image` once Ibrahim's photo is ready.
-- **About, Ventures, Blog, Videos, Talks, Contact** — the nav links to these
-  currently point at in-page anchors or external placeholders. These become
-  real pages/sections in the next build pass.
-- **TathSchool video + TechInHausa blog integration** — per the proposal,
-  this is the lightweight API layer that pulls the latest video from the
-  TathSchool DB and the latest post from TechInHausa. Not started yet.
-- **Newsletter signup** — not yet added to this pass; can slot into the
-  footer once ventures/about are built out.
+## Features
 
-## Deploying
+* **Unified Content Aggregation**: Pulls courses, video lessons, and books from separate educational platforms into a single grid layout for easier discovery.
+* **Dynamic Blog Integration**: Automatically retrieves the newest tech and AI literacy articles from an external headless CMS.
 
-Designed for Vercel (per the proposal). Connect the repo and it deploys with
-no extra config — `next/font` needs outbound access to Google Fonts at build
-time, which Vercel's build environment has by default.
+```mermaid
+sequenceDiagram
+  actor User
+  participant App as "Frontend Application"
+  participant CMS as "Sanity CMS"
+
+  User->>App: Navigate to Blog Page
+  App->>CMS: Request latest articles
+  CMS->>App: Return article payload
+  App->>User: Display article grid
+```
+
+* **Interactive Interface**: Features a responsive split-screen layout with an animated full-screen navigation overlay built with highly optimized transitions.
+
+```mermaid
+sequenceDiagram
+  actor User
+  participant UI as "Navigation Component"
+  
+  User->>UI: Click menu toggle
+  UI->>UI: Animate overlay transition
+  UI->>User: Display navigation links
+```
+
+* **Responsive Design**: Automatically scales the presentation of content, stacking grid elements and hero sections smoothly on mobile devices.
+
+## Environment Variables
+
+The application relies on several external services for content. You must configure these variables in your local environment.
+
+```env
+# Course Data Endpoint
+TATHSCHOOL_API_URL=https://tath.school/api/courses
+TATHSCHOOL_API_KEY=your_api_key_here
+
+# Video Data Endpoint
+TATHSCHOOL_VIDEOS_API_URL=https://tath.school/api/videos
+
+# Books Data Endpoint
+BOOKS_API_URL=https://storefront.api/books
+BOOKS_API_KEY=your_api_key_here
+
+# Blog Content Configuration
+SANITY_PROJECT_ID=your_sanity_project_id
+SANITY_DATASET=production
+SANITY_API_VERSION=2023-01-01
+SANITY_API_TOKEN=optional_private_token
+TECHINHAUSA_BLOG_BASE_URL=https://techinhausa.org/blog
+```
+
+## Technologies Used
+
+| Technology | Description |
+|------------|-------------|
+| Next.js | Framework handling routing and server-side rendering logic. |
+| React | Library used to build the responsive user interface. |
+| TypeScript | Provides static typing to ensure robust code quality. |
+| Tailwind CSS | Utility framework used for responsive layout and styling. |
+| Lucide React | Icon library used for interface elements. |
+
+## Contributing
+
+Contributions are welcome to help improve the platform. Please make sure to test your code locally and verify that the user interface remains fully responsive across all screen sizes before submitting a pull request.
+
+## Author Info
+
+* GitHub: [ibbaba](https://github.com/ibbaba)
+
+---
+
+[![Next.js](https://img.shields.io/badge/Next.js-000000?style=for-the-badge&logo=next.js&logoColor=white)](https://nextjs.org/)
+[![React](https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB)](https://reactjs.org/)
+[![TypeScript](https://img.shields.io/badge/TypeScript-3178C6?style=for-the-badge&logo=typescript&logoColor=white)](https://www.typescriptlang.org/)
+[![Tailwind CSS](https://img.shields.io/badge/Tailwind_CSS-38B2AC?style=for-the-badge&logo=tailwind-css&logoColor=white)](https://tailwindcss.com/)
+
+[![Readme was generated by Dokugen](https://img.shields.io/badge/Readme%20was%20generated%20by-Dokugen-brightgreen)](https://dokugen.samueltuoyo.com)
