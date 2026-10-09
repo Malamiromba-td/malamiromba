@@ -9,10 +9,11 @@ const navLinks = [
   // { label: "Contact", href: "/contact" },
   { label: "Courses", href: "/courses" },
   { label: "Press Assets", href: "/press-asset" },
-  { label: "Services & Pricing", href: "/services" },
+  // { label: "Services & Pricing", href: "/services" },
   { label: "Talks", href: "/talks" },
   // { label: "Ventures", href: "/ventures" },
   { label: "Videos", href: "/videos" },
+  { label: "Work with me", href: "/work-with-me" },
 ];
 
 export default function NavOverlay({
