@@ -32,9 +32,8 @@ export default function Hero() {
                 Malamiromba.
               </p>
               <p className="font-sans text-base leading-relaxed text-ink">
-                I&rsquo;m a tech educator and community builder making modern
-                technology accessible to Hausa-speaking communities &mdash;
-                through{" "}
+                I&rsquo;m a former software engineer and technical PM turned digital creator, educator, growth lead and independent advisor. Today, I consult for companies, development organizations, and international donors.{" "}
+                
                 <a
                   href="https://techinhausa.org"
                   className="underline decoration-ochre underline-offset-[3px] transition-colors"
