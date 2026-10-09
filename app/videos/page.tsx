@@ -55,7 +55,7 @@ export default function VideosPage() {
             professional growth, and the work that matters.
           ">
     {/* Page introduction */}
-      /*
+      {/*
       <section className="px-5 pb-10 pt-10 sm:px-8 sm:pb-14 sm:pt-16">
         <div className="mx-auto max-w-6xl">
           <p className="font-sans text-xs font-semibold uppercase tracking-[0.2em] text-[#598f8b]">
@@ -71,7 +71,7 @@ export default function VideosPage() {
             professional growth, and the work that matters.
           </p>
         </div>
-      </section>*/
+      </section>*/}
 
       {/* Featured YouTube video */}
       <section className="px-3 sm:px-8">
