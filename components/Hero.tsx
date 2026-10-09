@@ -32,7 +32,10 @@ export default function Hero() {
                 Malamiromba.
               </p>
               <p className="font-sans text-base leading-relaxed text-ink">
-                I&rsquo;m a former software engineer and technical PM turned digital creator, educator, growth lead and independent advisor. Today, I consult for companies, development organizations, and international donors.{" "}
+                I&rsquo;m a former software engineer and technical PM turned digital creator, educator, growth lead and independent advisor. Today, I consult for companies, development organizations, and international donors.
+                <br/>
+                I&rsquo;m making modern technology accessible to Hausa-speaking communities through
+                {" "}
                 
                 <a
                   href="https://techinhausa.org"
