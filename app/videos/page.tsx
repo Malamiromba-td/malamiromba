@@ -5,6 +5,7 @@ import {
   SiTiktok,
   SiYoutube,
 } from "@icons-pack/react-simple-icons";
+import PageShell from "@/components/PageShell";
 
 export const metadata = {
   title: "Videos | Ibrahim Malamiromba",
@@ -50,6 +51,7 @@ const socialLinks = [
 
 export default function VideosPage() {
   return (
+    <PageShell>
     <main className="min-h-screen bg-white text-[#171717]">
       {/* Page introduction */}
       <section className="px-5 pb-10 pt-10 sm:px-8 sm:pb-14 sm:pt-16">
@@ -183,6 +185,7 @@ export default function VideosPage() {
         </div>
       </section>
     </main>
+    </PageShell>
   );
 }
 
