@@ -52,8 +52,7 @@ const socialLinks = [
 export default function VideosPage() {
   return (
     <PageShell title="" intro="">
-    <main className="min-h-screen bg-white text-[#171717]">
-      {/* Page introduction */}
+    {/* Page introduction */}
       <section className="px-5 pb-10 pt-10 sm:px-8 sm:pb-14 sm:pt-16">
         <div className="mx-auto max-w-6xl">
           <p className="font-sans text-xs font-semibold uppercase tracking-[0.2em] text-[#598f8b]">
@@ -184,7 +183,6 @@ export default function VideosPage() {
           </Link>
         </div>
       </section>
-    </main>
     </PageShell>
   );
 }
