@@ -34,6 +34,7 @@ export default function Hero() {
               <p className="font-sans text-base leading-relaxed text-ink">
                 I&rsquo;m a former software engineer and technical PM turned digital creator, educator, growth lead and independent advisor. Today, I consult for companies, development organizations, and international donors.
                 <br/>
+                {/*
                 I&rsquo;m making modern technology accessible to Hausa-speaking communities through
                 {" "}
                 
@@ -51,6 +52,7 @@ export default function Hero() {
                   TathSchool
                 </a>
                 , and Malamiromba Ltd.
+                */}
               </p>
               <p className="font-sans text-base leading-relaxed text-muted">
                 Watch my{" "}
@@ -78,9 +80,22 @@ export default function Hero() {
           }}
         >
           {/* Replace with next/image once the real portrait is ready */}
-          <span className="mb-6 font-sans text-sm text-cream/40">
+          {/* <span className="mb-6 font-sans text-sm text-cream/40">
             [ portrait photo placeholder ]
-          </span>
+          </span>*/}
+          <picture className="absolute inset-0 block h-full w-full">
+            <source
+              media="(max-width: 767px)"
+              srcSet="/IMG_1832.jpeg"
+            />
+
+            <img
+              src="/001.JPG"
+              alt="Ibrahim Malamiromba"
+              className="absolute inset-0 h-full w-full object-cover object-center"
+              fetchPriority="high"
+            />
+          </picture>
         </div>
       </div>
 

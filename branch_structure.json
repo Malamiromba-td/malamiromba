@@ -1,0 +1,21 @@
+{
+  "default_branch": "main",
+  "branches": [
+    "Generalbang-patch-1",
+    "dev",
+    "main",
+    "port"
+  ],
+  "parent": {
+    "Generalbang-patch-1": "main",
+    "dev": "main",
+    "main": null,
+    "port": "main"
+  },
+  "order": [
+    "main",
+    "Generalbang-patch-1",
+    "dev",
+    "port"
+  ]
+}
