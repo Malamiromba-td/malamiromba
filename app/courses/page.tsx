@@ -16,7 +16,7 @@ const LMS_URL = "https://tath.school";
 export default async function CoursesPage() {
   const courses = await getCourses();
 
-  const featuredCourses = courses.slice(0, 2);
+  const featuredCourses = courses.slice(0, 1);
 
   const getCourseHref = (course: Course) => {
     switch (course.programCode) {
