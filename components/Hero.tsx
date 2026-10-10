@@ -8,57 +8,58 @@ export default function Hero() {
   const [menuOpen, setMenuOpen] = useState(false);
 
   return (
-    <div className="relative min-h-screen overflow-hidden bg-cream">
-      <div className="flex min-h-screen flex-col md:flex-row">
+    <div className="relative overflow-hidden bg-cream">
+      <div className="flex flex-col md:min-h-screen md:flex-row">
         {/* Left: content */}
-        <div className="flex basis-auto flex-col justify-between gap-6 px-6 py-7 sm:px-10 sm:py-8 md:basis-1/2">
+        <div className="flex flex-col justify-between gap-10 px-6 py-7 sm:px-10 sm:py-8 md:w-1/2 md:gap-12 md:px-12 md:py-10 lg:px-16">
+          {/* Keep the existing menu button */}
           <button
             onClick={() => setMenuOpen(true)}
             aria-label="Open menu"
             className="group w-7"
           >
-            <span className="block h-0.5 bg-ink mb-[5px] transition-transform duration-200 group-hover:translate-y-px" />
-            <span className="block h-0.5 bg-ink mb-[5px]" />
+            <span className="mb-[5px] block h-0.5 bg-ink transition-transform duration-200 group-hover:translate-y-px" />
+            <span className="mb-[5px] block h-0.5 bg-ink" />
             <span className="block h-0.5 w-[70%] bg-ink transition-transform duration-200 group-hover:-translate-y-px" />
           </button>
 
-          <div>
-            <h1 className="font-display text-[15vw] leading-[0.95] tracking-tight text-ink sm:text-[64px] md:text-[clamp(48px,7vw,96px)]">
+          <div className="flex-1 md:flex md:flex-col md:justify-center md:py-10">
+            <p className="mb-4 font-sans text-xs font-semibold uppercase tracking-[0.24em] text-ochre sm:text-sm">
+              Creator · Educator · Advisor
+            </p>
+
+            <h1 className="font-display text-[clamp(3.5rem,10vw,6.5rem)] leading-[0.82] tracking-[-0.055em] text-ink md:text-[clamp(3.5rem,6vw,6.5rem)]">
               IBRAHIM
             </h1>
-            <div className="mt-6 max-w-[440px] space-y-4">
-              <p className="font-sans text-base leading-relaxed text-ink">
-                Hi, I&rsquo;m Ibrahim Zubairu, but everyone calls me
-                Malamiromba.
+
+            <div className="mt-8 max-w-[440px] space-y-5">
+              <p className="font-sans text-lg leading-8 text-ink sm:text-xl sm:leading-8">
+                Hi, I’m Ibrahim Zubairu, but everyone calls me{" "}
+                <span className="decoration-ochre decoration-2 underline underline-offset-4">
+                  Malamiromba.
+                </span>
               </p>
-              <p className="font-sans text-base leading-relaxed text-ink">
-                I&rsquo;m a former software engineer and technical PM turned digital creator, educator, growth lead and independent advisor. Today, I consult for companies, development organizations, and international donors.
-                <br/>
-                I&rsquo;m making modern technology accessible to Hausa-speaking communities through
-                {" "}
-                
-                <a
-                  href="https://techinhausa.org"
-                  className="underline decoration-ochre underline-offset-[3px] transition-colors"
-                >
-                  TechInHausa
-                </a>
-                ,{" "}
-                <a
-                  href="https://tath.school"
-                  className="underline decoration-ochre underline-offset-[3px] transition-colors"
-                >
-                  TathSchool
-                </a>
-                , and Malamiromba Ltd.
+
+              <p className="font-sans text-sm leading-7 text-ink/80 sm:text-base sm:leading-7">
+                I’m a former software engineer and technical PM turned digital
+                creator, educator, growth lead and independent advisor. Today,
+                I consult for companies, development organizations, and
+                international donors.
               </p>
-              <p className="font-sans text-base leading-relaxed text-muted">
+
+              <p className="font-sans text-sm leading-7 text-muted sm:text-base">
                 Watch my{" "}
-                <a href="/videos" className="underline underline-offset-[3px]">
+                <a
+                  href="/videos"
+                  className="text-ink underline decoration-ochre underline-offset-4 transition-colors hover:text-ochre"
+                >
                   latest lesson
                 </a>{" "}
                 or read my{" "}
-                <a href="/blog" className="underline underline-offset-[3px]">
+                <a
+                  href="/blog"
+                  className="text-ink underline decoration-ochre underline-offset-4 transition-colors hover:text-ochre"
+                >
                   latest post
                 </a>
                 .
@@ -69,18 +70,26 @@ export default function Hero() {
           <SocialRow />
         </div>
 
-        {/* Right: full-bleed portrait */}
+        {/* Right: portrait */}
         <div
-          className="flex min-h-[60vw] items-end justify-center bg-indigo-deep md:min-h-screen md:basis-1/2 border-t-right border-b-left border-t-2 border-b-2 border-ink md:border-t-0 md:border-b-0"
+          className="relative h-[78vw] min-h-[280px] max-h-[460px] overflow-hidden border-y-2 border-ink bg-indigo-deep sm:h-[65vw] sm:max-h-[520px] md:h-auto md:min-h-screen md:max-h-none md:w-1/2 md:self-stretch md:border-y-0 md:border-l-2"
           style={{
             backgroundImage:
               "repeating-linear-gradient(135deg, rgba(255,255,255,0.03) 0px, rgba(255,255,255,0.03) 2px, transparent 2px, transparent 24px)",
           }}
         >
-          {/* Replace with next/image once the real portrait is ready */}
-          <span className="mb-6 font-sans text-sm text-cream/40">
-            [ portrait photo placeholder ]
-          </span>
+          <picture className="absolute inset-0 block h-full w-full">
+            <source
+              media="(max-width: 767px)"
+              srcSet="/IMG_1832.jpeg"
+            />
+            <img
+              src="/001.JPG"
+              alt="Ibrahim Malamiromba"
+              className="h-full w-full object-cover object-center"
+              fetchPriority="high"
+            />
+          </picture>
         </div>
       </div>
 
