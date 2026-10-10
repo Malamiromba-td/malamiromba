@@ -125,7 +125,7 @@ export default function VideosPage() {
                 target="_blank"
                 rel="noopener noreferrer"
                 aria-label={`${handle} — opens in a new tab`}
-                className="group flex min-h-40 flex-col items-center justify-center border border-neutral-200 px-3 py-6 transition duration-200 hover:-translate-y-1 hover:border-[#598f8b] hover:bg-[#f0f8f7] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[#598f8b] sm:min-h-48 sm:py-8"
+                className="group flex min-h-40 flex-col items-center justify-center px-3 py-6 transition duration-200 hover:-translate-y-1 hover:border-[#598f8b] hover:bg-[#f0f8f7] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[#598f8b] sm:min-h-48 sm:py-8"
               >
                 <span
                   className="flex h-16 w-16 items-center justify-center rounded-full transition-transform duration-200 group-hover:scale-110 sm:h-20 sm:w-20"
