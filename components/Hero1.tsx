@@ -10,7 +10,7 @@ export default function Hero() {
   return (
     <div className="relative min-h-screen overflow-hidden bg-cream">
       <div className="flex min-h-screen flex-col md:flex-row">
-        {/* Left: content */}
+       // {/* Left: content */}
         <div className="flex basis-auto flex-col justify-between gap-6 px-6 py-7 sm:px-10 sm:py-8 md:basis-1/2">
           <button
             onClick={() => setMenuOpen(true)}
