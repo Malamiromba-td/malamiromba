@@ -13,7 +13,7 @@ const waysToWork = [
     eyebrow: "Expertise & implementation",
     title: "Consulting & Advisory",
     description:
-      "Work directly with Ibrahim on AI literacy, digital strategy, program design, communications, social media management, training, and implementation support.",
+      "Hire Ibrahim for specialized consulting in AI adoption, ecosystem and community building, digital strategy, talent & capacity training, and full-cycle product & software development.",
     details: [
       "Training & advisory",
       "Program design",
@@ -28,7 +28,7 @@ const waysToWork = [
     eyebrow: "Shared goals, lasting impact",
     title: "Funders & Development Partners",
     description:
-      "Partner through Ibrahim's initiatives when a project needs local context, community access, digital reach, or experience working with international development partners.",
+      "Partner Ibrahim’s ecosystem initiatives to ground your projects in authentic local context, high-trust community networks, and measurable digital reach alongside international development agencies.",
     details: [
       "Community engagement",
       "Project co-design",
@@ -41,9 +41,9 @@ const waysToWork = [
   {
     number: "03",
     eyebrow: "Creative services",
-    title: "Digital Creation",
+    title: "Content creation & Storytelling",
     description:
-      "Bring your ideas to life with digital content for your brand, campaign, learning program, or online community. Explore content types and pricing to find the right fit.",
+      "I help brands connect with their audiences through creative storytelling and community-first content. Whether you're launching a campaign, building an educational curriculum, or growing a digital community, explore available content types and pricing below to get started..",
     details: [
       "Graphics & visual design",
       "Video and short-form content",
@@ -118,9 +118,9 @@ export default function WorkWithMePage() {
                   {way.number}
                 </span>
 
-                <p className="font-sans text-[10px] font-semibold uppercase tracking-[0.18em] text-ochre">
+                {/*  <p className="font-sans text-[10px] font-semibold uppercase tracking-[0.18em] text-ochre">
                   {way.eyebrow}
-                </p>
+                </p>*/}
 
                 <h3 className="relative mt-5 max-w-xs font-display text-2xl font-bold leading-tight sm:text-[1.7rem]">
                   {way.title}
