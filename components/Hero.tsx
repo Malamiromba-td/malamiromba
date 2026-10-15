@@ -81,7 +81,11 @@ export default function Hero() {
           <picture className="absolute inset-0 block h-full w-full">
             <source
               media="(max-width: 767px)"
+
               srcSet="/img-1.png"
+
+
+
             />
             <img
               src="/001.JPG"
