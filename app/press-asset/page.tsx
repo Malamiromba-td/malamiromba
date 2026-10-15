@@ -8,7 +8,7 @@ import { redirect } from "next/navigation";
  */
 const PRESS_ASSET_KIT_URL =
   process.env.PRESS_ASSET_KIT_URL ||
-  "https://drive.google.com/drive/folders/REPLACE_WITH_REAL_FOLDER_ID";
+  "https://drive.google.com/drive/folders/1WG8mr7IVaI93mrNGST2JXP1hmjcrIgjR";
 
 export default function PressPage() {
   redirect(PRESS_ASSET_KIT_URL);
