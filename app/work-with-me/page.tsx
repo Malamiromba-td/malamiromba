@@ -2,7 +2,7 @@
 import Link from "next/link";
 
 export const metadata = {
-  title: "Work With Me — Ibrahim Malamiromba",
+  title: "Work With Me | Ibrahim Malamiromba",
   description:
     "Explore consulting, development partnerships, and digital creation with Ibrahim Malamiromba.",
 };
@@ -38,6 +38,21 @@ const waysToWork = [
     action: "Start a conversation",
     href: "/contact?inquiry=partnership",
   },
+ // {
+//    number: "03",
+   // eyebrow: "Creative services",
+   // title: "Content creation & Storytelling",
+  //  description:
+ //     "I help brands connect with their audiences through creative storytelling and community-first content. Whether you're launching a campaign, building an educational curriculum, or growing a digital community, explore available content types and pricing below to get started..",
+ //   details: [
+//      "Graphics & visual design",
+//      "Video and short-form content",
+ //     "Writing & scripts",
+   //   "Presentations and digital assets",
+//    ],
+ //   action: "Explore digital services",
+  //  href: "/work-with-me/digital-creation",
+//  },
   {
     number: "03",
     eyebrow: "Creative services",
@@ -50,9 +65,25 @@ const waysToWork = [
       "Writing & scripts",
       "Presentations and digital assets",
     ],
-    action: "Explore digital services",
-    href: "/work-with-me/digital-creation",
+    action: "Discuss content creation and storytelling",
+    href: "/contact?inquiry=content&storytelling",
   },
+  
+{
+  number: "04",
+  eyebrow: "Digital products",
+  title: "Digital Products",
+  description:
+    "Explore and purchase my digital products, designed to help you work smarter, learn faster, and bring your ideas to life.",
+  details: [
+    "Ready-to-use digital resources",
+    "Practical tools and templates",
+    "Digital guides and learning materials",
+    "Products designed to simplify your workflow",
+  ],
+  action: "Explore digital products",
+  href: "https://nestuge.me/malamiromba",
+},
 ];
 
 export default function WorkWithMePage() {
@@ -90,7 +121,8 @@ export default function WorkWithMePage() {
       </section>
 
       {/* Collaboration options */}
-      <section className="bg-[#171109] px-6 py-16 text-cream sm:px-10 sm:py-20">
+      {  /* <section className="bg-[#171109] px-6 py-16 text-cream sm:px-10 sm:py-20">*/}
+        <section className=" px-6 py-16 sm:px-10 sm:py-20">
         <div className="mx-auto max-w-6xl">
           <div className="mb-10 max-w-2xl sm:mb-12">
             <p className="font-sans text-xs font-semibold uppercase tracking-[0.22em] text-ochre">
