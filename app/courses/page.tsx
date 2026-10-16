@@ -16,7 +16,7 @@ const LMS_URL = "https://tath.school";
 export default async function CoursesPage() {
   const courses = await getCourses();
 
-  const featuredCourses = courses.slice(0, 1);
+  const featuredCourses = courses.slice(10, 11);
 
   const getCourseHref = (course: Course) => {
     switch (course.programCode) {
@@ -34,12 +34,12 @@ export default async function CoursesPage() {
   return (
     <PageShell
       title="Courses"
-      intro="Lessons taught through TathSchool, on tech and AI in plain Hausa."
+      intro=""
     >
       <div className="space-y-12">
         {/* Featured courses */}
         <section>
-          <div className="mb-6">
+          {/* <div className="mb-6">
             <p className="font-sans text-xs font-semibold uppercase tracking-[0.2em] text-ochre">
               Selected learning
             </p>
@@ -53,13 +53,14 @@ export default async function CoursesPage() {
               Visit the learning platform to explore more courses
               and access the full learning experience.
             </p>
-          </div>
+          </div>*/}
 
           {featuredCourses.length > 0 ? (
             <CardGrid
               items={featuredCourses.map((course) => ({
                 id: course.id,
-                label: "Featured course",
+               // label: "Featured course"
+                label: "",
                 title: course.title,
                 href: getCourseHref(course),
                 imageUrl: "/malamiromba-headshot.jpg",
