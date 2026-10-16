@@ -126,7 +126,7 @@ export default function WorkWithMePage() {
         <div className="mx-auto max-w-6xl">
           <div className="mb-10 max-w-2xl sm:mb-12">
             <p className="font-sans text-xs font-semibold uppercase tracking-[0.22em] text-ochre">
-              Three ways to work together
+              Four ways to work together
             </p>
 
             <h2 className="mt-4 font-display text-3xl font-bold leading-tight sm:text-5xl">
@@ -158,11 +158,11 @@ export default function WorkWithMePage() {
                   {way.title}
                 </h3>
 
-                <p className="mt-4 font-sans text-sm leading-6 text-cream/60">
+                <p className="mt-4 font-sans text-sm leading-6 text-muted">
                   {way.description}
                 </p>
 
-                <ul className="mt-5 space-y-2 border-t border-white/10 pt-4 font-sans text-xs leading-5 text-cream/45">
+                <ul className="mt-5 space-y-2 border-t border-white/10 pt-4 font-sans text-xs leading-5 text-muted">
                   {way.details.map((detail) => (
                     <li key={detail} className="flex gap-2">
                       <span aria-hidden="true" className="text-ochre">
