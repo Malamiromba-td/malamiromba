@@ -16,7 +16,7 @@ const LMS_URL = "https://tath.school";
 export default async function CoursesPage() {
   const courses = await getCourses();
 
-  const featuredCourses = courses.slice(0, 1);
+  const featuredCourses = courses.slice(10, 11);
 
   const getCourseHref = (course: Course) => {
     switch (course.programCode) {
@@ -34,12 +34,12 @@ export default async function CoursesPage() {
   return (
     <PageShell
       title="Courses"
-      intro="Lessons taught through TathSchool, on tech and AI in plain Hausa."
+      intro=""
     >
       <div className="space-y-12">
         {/* Featured courses */}
         <section>
-          <div className="mb-6">
+          {/* <div className="mb-6">
             <p className="font-sans text-xs font-semibold uppercase tracking-[0.2em] text-ochre">
               Selected learning
             </p>
@@ -53,13 +53,14 @@ export default async function CoursesPage() {
               Visit the learning platform to explore more courses
               and access the full learning experience.
             </p>
-          </div>
+          </div>*/}
 
           {featuredCourses.length > 0 ? (
             <CardGrid
               items={featuredCourses.map((course) => ({
                 id: course.id,
-                label: "Featured course",
+               // label: "Featured course"
+                label: "",
                 title: course.title,
                 href: getCourseHref(course),
                 imageUrl: "/malamiromba-headshot.jpg",
@@ -79,7 +80,7 @@ export default async function CoursesPage() {
         </section>
 
         {/* LMS CTA */}
-        <section className="bg-[#171109] px-6 py-10 text-cream sm:px-8 sm:py-12">
+        <section className="">
           <p className="font-sans text-xs font-semibold uppercase tracking-[0.2em] text-ochre">
             Continue learning
           </p>
@@ -88,7 +89,7 @@ export default async function CoursesPage() {
             Explore the full course catalogue.
           </h2>
 
-          <p className="mt-4 max-w-xl font-sans text-sm leading-6 text-cream/65">
+          <p className="mt-4 max-w-xl font-sans text-sm leading-6 text-muted">
             Discover more courses, view programme details, and
             continue to TathSchool for the full learning experience.
           </p>
