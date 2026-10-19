@@ -59,16 +59,18 @@ return ( <PageShell
    title="Talks & Media"
    intro="Conversations, interviews, and publications on artificial intelligence, technology, and their impact on society."
  > <section className="space-y-10">
-{/* Featured YouTube appearance */} <article className="overflow-hidden rounded-2xl border border-black/10"> <div className="aspect-video w-full bg-black"> <iframe
+{/* Featured YouTube appearance */} 
+    <article className="overflow-hidden rounded-2xl border border-black/10"> 
+       <div className="aspect-video w-full bg-black"> 
+          <iframe
            className="h-full w-full"
            src="https://www.youtube.com/embed/buFzgR8T6JI"
            title="Ibrahim Malamiromba on NTA Hausa"
            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
            referrerPolicy="strict-origin-when-cross-origin"
            allowFullScreen
-         /> </div>
-
-```
+         /> 
+       </div>
       <div className="space-y-3 p-5 sm:p-7">
         <p className="text-xs font-semibold uppercase tracking-[0.18em] text-muted">
           NTA Hausa · Video Interview
