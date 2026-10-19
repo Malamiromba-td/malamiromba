@@ -80,7 +80,7 @@ export default async function CoursesPage() {
         </section>
 
         {/* LMS CTA */}
-        <section className="bg-[#171109] px-6 py-10 text-cream sm:px-8 sm:py-12">
+        <section className="">
           <p className="font-sans text-xs font-semibold uppercase tracking-[0.2em] text-ochre">
             Continue learning
           </p>
@@ -89,7 +89,7 @@ export default async function CoursesPage() {
             Explore the full course catalogue.
           </h2>
 
-          <p className="mt-4 max-w-xl font-sans text-sm leading-6 text-cream/65">
+          <p className="mt-4 max-w-xl font-sans text-sm leading-6 text-muted">
             Discover more courses, view programme details, and
             continue to TathSchool for the full learning experience.
           </p>
