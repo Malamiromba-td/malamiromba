@@ -7,6 +7,15 @@ description:
 };
 
 const resources = [
+  {
+outlet: "NTA Hausa",
+type: "Video",
+title: "Ibrahim Malamiromba NTA Hausa Video Appearance",
+description:
+"Watch Ibrahim Malamiromba's video appearance on NTA hausa.",
+url: "https://youtu.be/buFzgR8T6JI?si=LekEuGaFTKSE3yyx",
+action: "Watch Video",
+},
 {
 outlet: "BBC Hausa",
 type: "Radio / Interview",
@@ -60,7 +69,7 @@ return ( <PageShell
    intro="Conversations, interviews, and publications on artificial intelligence, technology, and their impact on society."
  > <section className="space-y-10">
 {/* Featured YouTube appearance */} 
-    <article className="overflow-hidden rounded-2xl border border-black/10"> 
+    {/*<article className="overflow-hidden rounded-2xl border border-black/10"> 
        <div className="aspect-video w-full bg-black"> 
           <iframe
            className="h-full w-full"
@@ -90,7 +99,7 @@ return ( <PageShell
           Watch on YouTube <span aria-hidden="true">↗</span>
         </a>
       </div>
-    </article>
+    </article>*/}
 
     {/* Other media resources */}
     <div>
