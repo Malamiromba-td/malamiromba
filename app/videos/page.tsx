@@ -5,7 +5,7 @@ import {
   SiTiktok,
   SiYoutube,
 } from "@icons-pack/react-simple-icons";
-import { SiLinkedin } from "react-icons/si";
+import { Linkedin } from "lucide-react";
 import PageShell from "@/components/PageShell";
 
 export const metadata = {
@@ -45,7 +45,7 @@ const socialLinks = [
   name: "LinkedIn",
   href: "https://www.linkedin.com/in/malamiromba/",
   handle: "Connect on LinkedIn",
-  Icon: SiLinkedin,
+  Icon: LinkedIn,
   color: "#0A66C2",
 },
 ];
