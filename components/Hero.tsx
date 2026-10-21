@@ -1,6 +1,7 @@
 "use client";
 
 import { useState } from "react";
+import Image from "next/image";
 import SocialRow from "./SocialRow";
 import NavOverlay from "./NavOverlay";
 
@@ -73,12 +74,12 @@ export default function Hero() {
         {/* Right: portrait */}
         <div
           className="relative h-[78vw] min-h-[280px] max-h-[460px] overflow-hidden border-y-2 border-ink bg-indigo-deep sm:h-[65vw] sm:max-h-[520px] md:h-auto md:min-h-screen md:max-h-none md:w-1/2 md:self-stretch md:border-y-0 md:border-l-2"
-          style={{
-            backgroundImage:
-              "repeating-linear-gradient(135deg, rgba(255,255,255,0.03) 0px, rgba(255,255,255,0.03) 2px, transparent 2px, transparent 24px)",
-          }}
+          // style={{
+           // backgroundImage:
+            //  "repeating-linear-gradient(135deg, rgba(255,255,255,0.03) 0px, rgba(255,255,255,0.03) 2px, transparent 2px, transparent 24px)",
+        //  }}
         >
-          <picture className="absolute inset-0 block h-full w-full">
+                {/* <picture className="absolute inset-0 block h-full w-full">
             <source
               media="(max-width: 767px)"
 
@@ -93,7 +94,26 @@ export default function Hero() {
               className="h-full w-full object-cover object-center"
               fetchPriority="high"
             />
-          </picture>
+          </picture>*/}
+          <div className="absolute inset-0">
+  <Image
+    src="/001.JPG"
+    alt="Ibrahim Malamiromba"
+    fill
+    priority
+    sizes="(max-width: 767px) 100vw, 50vw"
+    className="object-cover object-center max-md:hidden"
+  />
+
+  <Image
+    src="/img-1.png"
+    alt="Ibrahim Malamiromba"
+    fill
+    priority
+    sizes="100vw"
+    className="object-cover object-center md:hidden"
+  />
+</div>
         </div>
       </div>
 

@@ -5,6 +5,7 @@ import {
   SiTiktok,
   SiYoutube,
 } from "@icons-pack/react-simple-icons";
+import { Linkedin } from "lucide-react";
 import PageShell from "@/components/PageShell";
 
 export const metadata = {
@@ -41,12 +42,12 @@ const socialLinks = [
     color: "#111111",
   },
   {
-    name: "YouTube",
-    href: "https://youtube.com/@malam_iromba",
-    handle: "Subscribe on YouTube",
-    Icon: SiYoutube,
-    color: "#FF0000",
-  },
+  name: "LinkedIn",
+  href: "https://www.linkedin.com/in/malamiromba/",
+  handle: "Connect on LinkedIn",
+  Icon: Linkedin,
+  color: "#0A66C2",
+},
 ];
 
 export default function VideosPage() {

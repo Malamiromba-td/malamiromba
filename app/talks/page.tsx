@@ -7,6 +7,15 @@ description:
 };
 
 const resources = [
+  {
+outlet: "NTA Hausa",
+type: "Video",
+title: "Ibrahim Malamiromba NTA Hausa Video Appearance",
+description:
+"Watch Ibrahim Malamiromba's video appearance on NTA hausa.",
+url: "https://youtu.be/buFzgR8T6JI?si=LekEuGaFTKSE3yyx",
+action: "Watch Video",
+},
 {
 outlet: "BBC Hausa",
 type: "Radio / Interview",
@@ -60,7 +69,7 @@ return ( <PageShell
    intro="Conversations, interviews, and publications on artificial intelligence, technology, and their impact on society."
  > <section className="space-y-10">
 {/* Featured YouTube appearance */} 
-    <article className="overflow-hidden rounded-2xl border border-black/10"> 
+    {/*<article className="overflow-hidden rounded-2xl border border-black/10"> 
        <div className="aspect-video w-full bg-black"> 
           <iframe
            className="h-full w-full"
@@ -90,24 +99,24 @@ return ( <PageShell
           Watch on YouTube <span aria-hidden="true">↗</span>
         </a>
       </div>
-    </article>
+    </article>*/}
 
     {/* Other media resources */}
     <div>
-      <div className="mb-6 space-y-2">
+      {/*<div className="mb-6 space-y-2">
         <h2 className="text-2xl font-semibold tracking-tight">
           More from the media
         </h2>
         <p className="text-sm leading-6 text-muted">
           Interviews, videos, and published articles featuring Ibrahim.
         </p>
-      </div>
+      </div>*/}
 
-      <div className="grid gap-4 sm:grid-cols-2">
+      <div className="grid gap-4 sm:grid-cols-1">
         {resources.map((resource) => (
           <article
             key={resource.url}
-            className="flex h-full flex-col rounded-2xl border border-black/10 p-5 transition-colors hover:border-black/30 sm:p-6"
+            className="flex h-full flex-col border-b border-black/10 py-5 px-2 transition-colors hover:border-black/30 sm:py-6"
           >
             <div className="mb-4 flex flex-wrap items-center gap-2">
               <span className="text-xs font-semibold uppercase tracking-wider text-muted">
