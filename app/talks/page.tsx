@@ -103,20 +103,20 @@ return ( <PageShell
 
     {/* Other media resources */}
     <div>
-      <div className="mb-6 space-y-2">
+      {/*<div className="mb-6 space-y-2">
         <h2 className="text-2xl font-semibold tracking-tight">
           More from the media
         </h2>
         <p className="text-sm leading-6 text-muted">
           Interviews, videos, and published articles featuring Ibrahim.
         </p>
-      </div>
+      </div>*/}
 
-      <div className="grid gap-4 sm:grid-cols-2">
+      <div className="grid gap-4 sm:grid-cols-1">
         {resources.map((resource) => (
           <article
             key={resource.url}
-            className="flex h-full flex-col rounded-2xl border border-black/10 p-5 transition-colors hover:border-black/30 sm:p-6"
+            className="flex h-full flex-col border-b border-black/10 py-5 px-2 transition-colors hover:border-black/30 sm:py-6"
           >
             <div className="mb-4 flex flex-wrap items-center gap-2">
               <span className="text-xs font-semibold uppercase tracking-wider text-muted">
