@@ -116,7 +116,7 @@ return ( <PageShell
         {resources.map((resource) => (
           <article
             key={resource.url}
-            className="flex h-full flex-col rounded-2xl border-b border-black/10 py-5 transition-colors hover:border-black/30 sm:py-6"
+            className="flex h-full flex-col border-b border-black/10 py-5 px-2 transition-colors hover:border-black/30 sm:py-6"
           >
             <div className="mb-4 flex flex-wrap items-center gap-2">
               <span className="text-xs font-semibold uppercase tracking-wider text-muted">
