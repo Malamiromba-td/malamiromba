@@ -1,6 +1,7 @@
 "use client";
 
 import { useState } from "react";
+import Image from "next/image";
 import SocialRow from "./SocialRow";
 import NavOverlay from "./NavOverlay";
 
@@ -78,7 +79,7 @@ export default function Hero() {
               "repeating-linear-gradient(135deg, rgba(255,255,255,0.03) 0px, rgba(255,255,255,0.03) 2px, transparent 2px, transparent 24px)",
           }}
         >
-          <picture className="absolute inset-0 block h-full w-full">
+                {/* <picture className="absolute inset-0 block h-full w-full">
             <source
               media="(max-width: 767px)"
 
@@ -93,7 +94,26 @@ export default function Hero() {
               className="h-full w-full object-cover object-center"
               fetchPriority="high"
             />
-          </picture>
+          </picture>*/}
+          <div className="absolute inset-0">
+  <Image
+    src="/001.JPG"
+    alt="Ibrahim Malamiromba"
+    fill
+    priority
+    sizes="(max-width: 767px) 100vw, 50vw"
+    className="object-cover object-center max-md:hidden"
+  />
+
+  <Image
+    src="/img-1.png"
+    alt="Ibrahim Malamiromba"
+    fill
+    priority
+    sizes="100vw"
+    className="object-cover object-center md:hidden"
+  />
+</div>
         </div>
       </div>
 
