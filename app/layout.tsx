@@ -46,6 +46,22 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
+      <head>
+  <link
+    rel="preload"
+    as="image"
+    href="/001.JPG"
+    fetchPriority="high"
+    media="(min-width: 768px)"
+  />
+  <link
+    rel="preload"
+    as="image"
+    href="/img-1.png"
+    fetchPriority="high"
+    media="(max-width: 767px)"
+  />
+</head>
       <body
         className={`${displayFont.variable} ${sansFont.variable} font-sans`}
       >
