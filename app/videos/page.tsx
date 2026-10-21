@@ -45,7 +45,7 @@ const socialLinks = [
   name: "LinkedIn",
   href: "https://www.linkedin.com/in/malamiromba/",
   handle: "Connect on LinkedIn",
-  Icon: LinkedIn,
+  Icon: Linkedin,
   color: "#0A66C2",
 },
 ];
