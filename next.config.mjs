@@ -7,6 +7,7 @@ const nextConfig = {
       {
         protocol: "https",
         hostname: "tathschool.b-cdn.net",
+        path: "courses",
       },
       {
         protocol: "https",
