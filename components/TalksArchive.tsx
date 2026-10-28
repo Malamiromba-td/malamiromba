@@ -2,7 +2,7 @@
 "use client";
 
 import { useState } from "react";
-import { talks, talkYears } from "@/lib/talks";
+import { talks, talkYears } from "@/lib/data/talks";
 
 export default function TalksArchive() {
   const [openYear, setOpenYear] = useState<number | null>(null);
