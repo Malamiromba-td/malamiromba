@@ -1,176 +1,170 @@
+
 import PageShell from "@/components/PageShell";
+import { talks, featuredTalk, talkYears } from "@/lib/data/talks";
 
 export const metadata = {
-title: "Talks & Media | Ibrahim Malamiromba",
-description:
-"Watch, listen to, and read Ibrahim Malamiromba's media appearances, interviews, and publications on AI and technology.",
+  title: "Talks & Media | Ibrahim Malamiromba",
+  description:
+    "Explore Ibrahim Malamiromba's interviews, media appearances, and publications on artificial intelligence and technology.",
 };
 
-const resources = [
-  {
-outlet: "NTA Hausa",
-type: "Video",
-title: "Ibrahim Malamiromba NTA Hausa Video Appearance",
-description:
-"Watch Ibrahim Malamiromba's video appearance on NTA hausa.",
-url: "https://youtu.be/buFzgR8T6JI?si=LekEuGaFTKSE3yyx",
-action: "Watch Video",
-},
-{
-outlet: "BBC Hausa",
-type: "Radio / Interview",
-title: "BBC Hausa Interview",
-description:
-"Listen to Ibrahim Malamiromba's appearance on BBC Hausa.",
-url: "https://www.bbc.com/hausa/bbc_hausa_radio/w3ct77jk",
-action: "Listen / Read",
-},
-{
-outlet: "BBC Hausa",
-type: "Video",
-title: "BBC Hausa Video Interview",
-description:
-"Watch Ibrahim's video appearance shared by BBC Hausa.",
-url: "https://www.facebook.com/share/v/1GmdbwFPLE/",
-action: "Watch Video",
-},
-{
-outlet: "Daily Trust",
-type: "Article",
-title: "How AI-powered systems shortchange qualified job applicants",
-description:
-"An article exploring how AI-powered systems can disadvantage qualified job applicants.",
-url: "https://dailytrust.com/how-ai-powered-systems-shortchange-qualified-job-applicants/",
-action: "Read Article",
-},
-{
-outlet: "Daily Trust",
-type: "Article",
-title: "Can AI tools detect machine-generated content?",
-description:
-"An article examining AI tools and their ability to identify machine-generated content.",
-url: "https://dailytrust.com/can-ai-tools-detect-machine-generated-content/",
-action: "Read Article",
-},
-{
-outlet: "RFI Hausa",
-type: "Video",
-title: "RFI Hausa Video Appearance",
-description:
-"Watch Ibrahim Malamiromba's video appearance shared by RFI Hausa.",
-url: "https://www.facebook.com/share/v/1KAZpeerSp/",
-action: "Watch Video",
-},
-];
-
-export default function TalksPage() {
-return ( <PageShell
-   title="Talks & Media"
-   intro="Conversations, interviews, and publications on artificial intelligence, technology, and their impact on society."
- > <section className="space-y-10">
-{/* Featured YouTube appearance */} 
-    {/*<article className="overflow-hidden rounded-2xl border border-black/10"> 
-       <div className="aspect-video w-full bg-black"> 
-          <iframe
-           className="h-full w-full"
-           src="https://www.youtube.com/embed/buFzgR8T6JI"
-           title="Ibrahim Malamiromba on NTA Hausa"
-           allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-           referrerPolicy="strict-origin-when-cross-origin"
-           allowFullScreen
-         /> 
-       </div>
-      <div className="space-y-3 p-5 sm:p-7">
-        <p className="text-xs font-semibold uppercase tracking-[0.18em] text-muted">
-          NTA Hausa · Video Interview
-        </p>
-        <h2 className="text-2xl font-semibold tracking-tight">
-          Ibrahim Malamiromba on NTA Hausa
-        </h2>
-        <p className="max-w-2xl text-sm leading-6 text-muted">
-          Watch Ibrahim Malamiromba's appearance on NTA Hausa.
-        </p>
-        <a
-          href="https://youtu.be/buFzgR8T6JI?si=LekEuGaFTKSE3yyx"
-          target="_blank"
-          rel="noopener noreferrer"
-          className="inline-flex items-center gap-2 text-sm font-semibold underline underline-offset-4"
-        >
-          Watch on YouTube <span aria-hidden="true">↗</span>
-        </a>
-      </div>
-    </article>*/}
-
-    {/* Other media resources */}
-    <div>
-      {/*<div className="mb-6 space-y-2">
-        <h2 className="text-2xl font-semibold tracking-tight">
-          More from the media
-        </h2>
-        <p className="text-sm leading-6 text-muted">
-          Interviews, videos, and published articles featuring Ibrahim.
-        </p>
-      </div>*/}
-
-      <div className="grid gap-4 sm:grid-cols-1">
-        {resources.map((resource) => (
-          <article
-            key={resource.url}
-            className="flex h-full flex-col border-b border-black/10 py-5 px-2 transition-colors hover:border-black/30 sm:py-6"
-          >
-            <div className="mb-4 flex flex-wrap items-center gap-2">
-              <span className="text-xs font-semibold uppercase tracking-wider text-muted">
-                {resource.outlet}
-              </span>
-              <span className="rounded-full border border-black/10 px-2.5 py-1 text-xs text-muted">
-                {resource.type}
-              </span>
-            </div>
-
-            <h3 className="text-lg font-semibold leading-snug">
-              {resource.title}
-            </h3>
-
-            <p className="mt-3 flex-1 text-sm leading-6 text-muted">
-              {resource.description}
-            </p>
-
-            <a
-              href={resource.url}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="mt-6 inline-flex items-center gap-2 text-sm font-semibold underline underline-offset-4"
-            >
-              {resource.action}
-              <span aria-hidden="true">↗</span>
-            </a>
-          </article>
-        ))}
-      </div>
-    </div>
-  </section>
-</PageShell>
-);
+function ExternalLink({
+  href,
+  children,
+}: {
+  href: string;
+  children: React.ReactNode;
+}) {
+  return (
+    <a
+      href={href}
+      target="_blank"
+      rel="noopener noreferrer"
+      className="inline-flex items-center gap-2 text-sm font-semibold transition-opacity hover:opacity-65"
+    >
+      {children}
+      <span aria-hidden="true">↗</span>
+    </a>
+  );
 }
 
-
-/*import PageShell from "@/components/PageShell";
-
-export const metadata = {
-  title: "Talks | Ibrahim Malamiromba",
-};
-
 export default function TalksPage() {
+  const archiveYears = talkYears.filter(
+    (year) => year !== featuredTalk?.year,
+  );
+
   return (
     <PageShell
-      title="Talks"
-      intro="Speaking engagements and community sessions will be listed here."
+      title="Talks & Media"
+      intro="Conversations, interviews, and publications exploring artificial intelligence, technology, and their impact on society."
     >
-      <p className="font-sans text-sm text-muted">
-        No talks added yet — replace this with a real list (event, date, link to
-        video/slides) once details are ready, following the same row-list style
-        as Courses and Books.
-      </p>
+      <div className="space-y-16">
+        {/* Featured appearance */}
+        {featuredTalk && (
+          <section aria-labelledby="featured-talk-heading">
+            <div className="mb-6 flex items-center gap-3">
+              <span className="h-px w-8 bg-current" />
+              <p className="text-xs font-semibold uppercase tracking-[0.18em] text-muted">
+                Featured appearance · {featuredTalk.year}
+              </p>
+            </div>
+
+            <article className="grid overflow-hidden rounded-2xl border border-black/10 md:grid-cols-2">
+              <a
+                href={featuredTalk.url}
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label={`Watch ${featuredTalk.title} on YouTube`}
+                className="group relative block aspect-video overflow-hidden bg-black md:aspect-auto md:min-h-72"
+              >
+                <img
+                  src="https://img.youtube.com/vi/buFzgR8T6JI/hqdefault.jpg"
+                  alt="Preview of Ibrahim Malamiromba's NTA Hausa appearance"
+                  className="absolute inset-0 h-full w-full object-cover transition-transform duration-500 group-hover:scale-105"
+                />
+
+                <div className="absolute inset-0 flex items-center justify-center bg-black/20 transition-colors group-hover:bg-black/35">
+                  <span className="flex h-16 w-16 items-center justify-center rounded-full bg-white text-xl text-black shadow-lg transition-transform group-hover:scale-110">
+                    <span aria-hidden="true">▶</span>
+                  </span>
+                </div>
+
+                <span className="absolute bottom-4 left-4 rounded-full bg-black/70 px-3 py-1.5 text-xs font-medium text-white">
+                  NTA Hausa · Video
+                </span>
+              </a>
+
+              <div className="flex flex-col justify-center p-6 sm:p-8 md:p-10">
+                <p className="text-xs font-semibold uppercase tracking-[0.16em] text-muted">
+                  {featuredTalk.outlet}
+                </p>
+
+                <h2
+                  id="featured-talk-heading"
+                  className="mt-4 text-2xl font-semibold leading-tight tracking-tight sm:text-3xl"
+                >
+                  {featuredTalk.title}
+                </h2>
+
+                <p className="mt-4 text-sm leading-7 text-muted">
+                  {featuredTalk.description}
+                </p>
+
+                <div className="mt-8">
+                  <ExternalLink href={featuredTalk.url}>
+                    {featuredTalk.action}
+                  </ExternalLink>
+                </div>
+              </div>
+            </article>
+          </section>
+        )}
+
+        {/* Previous media appearances */}
+        {archiveYears.map((year) => {
+          const yearTalks = talks.filter(
+            (talk) => talk.year === year && !talk.featured,
+          );
+
+          if (yearTalks.length === 0) return null;
+
+          return (
+            <section key={year} aria-labelledby={`year-${year}`}>
+              <div className="mb-8 flex items-baseline justify-between gap-4 border-b border-black/10 pb-4">
+                <h2
+                  id={`year-${year}`}
+                  className="text-2xl font-semibold tracking-tight sm:text-3xl"
+                >
+                  {year}
+                </h2>
+
+                <p className="text-xs text-muted sm:text-sm">
+                  {yearTalks.length}{" "}
+                  {yearTalks.length === 1 ? "appearance" : "appearances"}
+                </p>
+              </div>
+
+              <div className="divide-y divide-black/10">
+                {yearTalks.map((talk) => (
+                  <article
+                    key={talk.url}
+                    className="group py-6 sm:py-8"
+                  >
+                    <div className="flex flex-col gap-4 sm:flex-row sm:items-start sm:justify-between sm:gap-8">
+                      <div className="min-w-0 flex-1">
+                        <div className="mb-3 flex flex-wrap items-center gap-2">
+                          <span className="text-xs font-semibold uppercase tracking-[0.14em] text-muted">
+                            {talk.outlet}
+                          </span>
+
+                          <span className="rounded-full border border-black/10 px-2.5 py-1 text-xs text-muted">
+                            {talk.type}
+                          </span>
+                        </div>
+
+                        <h3 className="text-lg font-semibold leading-snug tracking-tight sm:text-xl">
+                          {talk.title}
+                        </h3>
+
+                        <p className="mt-3 max-w-2xl text-sm leading-7 text-muted">
+                          {talk.description}
+                        </p>
+                      </div>
+
+                      <div className="shrink-0 sm:pt-1">
+                        <ExternalLink href={talk.url}>
+                          {talk.action}
+                        </ExternalLink>
+                      </div>
+                    </div>
+                  </article>
+                ))}
+              </div>
+            </section>
+          );
+        })}
+      </div>
     </PageShell>
   );
-}*/
+            }
+              
