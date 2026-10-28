@@ -52,7 +52,7 @@ function normalizeCourse(raw: Record<string, unknown>, index: number): Course {
 
 export function normalizeCourseImageName(value: string): string {
   return value
-    .replace(/\.[^.]+$/, "") // Remove file extension
+    .replace(/\.jpg$/i, "") // Remove file extension
     .normalize("NFKD")
     .replace(/[\u0300-\u036f]/g, "")
     .toLowerCase()
