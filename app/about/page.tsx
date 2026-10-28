@@ -1,4 +1,4 @@
-
+import Image from "next/image";
 import PageShell from "@/components/PageShell";
 import { communities } from "@/lib/data/community";
 
