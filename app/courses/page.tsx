@@ -27,6 +27,17 @@ function getCourseHref(course: Course) {
   }
 }
 
+
+function normalizeImageName(value: string): string {
+  return value
+    .replace(/\.jpg$/i, "")
+    .normalize("NFKD")
+    .replace(/[\u0300-\u036f]/g, "")
+    .toLowerCase()
+    .replace(/[^a-z0-9]+/g, " ")
+    .trim();
+}
+
 const imageLookup = new Map(
   COURSE_IMAGES.map((filename) => [
     normalizeImageName(filename),
