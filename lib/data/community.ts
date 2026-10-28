@@ -1,7 +1,6 @@
 
 export type CommunityInitiative = {
   name: string;
-  number: string;
   label: string;
   description: string;
   href?: string;
