@@ -8,7 +8,7 @@ export default function TalksArchive() {
   const [openYear, setOpenYear] = useState<number | null>(null);
 
   return (
-    <div className="divide-y divide-black/10 border-y border-black/10">
+    <div className="divide-y divide-black/10 border-b border-black/10">
       {talkYears.map((year) => {
         const yearTalks = talks.filter((talk) => talk.year === year);
         const isOpen = openYear === year;
@@ -31,10 +31,10 @@ export default function TalksArchive() {
                   {year}
                 </span>
 
-                <span className="text-xs text-muted sm:text-sm">
+                {/*<span className="text-xs text-muted sm:text-sm">
                   {yearTalks.length}{" "}
                   {yearTalks.length === 1 ? "appearance" : "appearances"}
-                </span>
+                </span>*/}
               </span>
 
               <svg
