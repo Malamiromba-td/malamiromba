@@ -4,6 +4,7 @@ import PageShell from "@/components/PageShell";
 import CardGrid from "@/components/CardGrid";
 import { getCourses } from "@/lib/data/courses";
 import { Course } from "@/lib/types";
+import { COURSE_IMAGES } from "@/lib/data/course-images";
 
 export const metadata = {
   title: "AI Courses | Ibrahim Malamiromba",
@@ -25,6 +26,13 @@ function getCourseHref(course: Course) {
       return `https://tath.school/courses/${course.id}`;
   }
 }
+
+const imageLookup = new Map(
+  COURSE_IMAGES.map((filename) => [
+    normalizeImageName(filename),
+    `/${encodeURIComponent(filename)}`,
+  ]),
+);
 
 export default async function CoursesPage() {
   const courses = await getCourses();
@@ -48,7 +56,10 @@ export default async function CoursesPage() {
                 label: "",
                 title: course.title,
                 href: getCourseHref(course),
-                imageUrl: course.imageUrl || "/malamiromba-headshot.jpg",
+               // imageUrl: course.imageUrl || "/malamiromba-headshot.jpg",
+                imageUrl:
+  imageLookup.get(normalizeImageName(course.title)) ??
+  "/malamiromba-headshot.jpg",
                 meta:
                   [course.level, course.duration]
                     .filter(Boolean)
