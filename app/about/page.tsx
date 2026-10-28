@@ -148,9 +148,9 @@ function ImagePlaceholder({
         backgroundImage:
           "repeating-linear-gradient(135deg, rgba(255,255,255,0.03) 0px, rgba(255,255,255,0.03) 2px, transparent 2px, transparent 24px)",
       }}
-    >
+    >*/{
       {/* Replace with a real next/image once photos are ready */}
-    /*  <span className="mb-4 font-sans text-xs text-cream/40">{label}</span>
+  {/*  <span className="mb-4 font-sans text-xs text-cream/40">{label}</span>
     </div>
   );
 }
