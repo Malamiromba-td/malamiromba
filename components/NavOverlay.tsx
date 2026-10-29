@@ -4,8 +4,8 @@ import SocialRow from "./SocialRow";
 
 const navLinks = [
   { label: "About", href: "/about" },
-  { label: "Blog", href: "/blog" },
-  { label: "Books", href: "/books" },
+ // { label: "Blog", href: "/blog" },
+ // { label: "Books", href: "/books" },
   // { label: "Contact", href: "/contact" },
   { label: "Courses", href: "/courses" },
   {
