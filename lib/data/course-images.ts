@@ -5,7 +5,7 @@ const COURSE_IMAGES: Record<string, string> = {
   "DATA ANALYSIS WITH AI & POWER BI": "Data Analysis.jpg",
   "CONTENT CREATION WITH Gen AI": "Content Creation with GenAI.jpg",
   "YOUTUBE MONETIZATION": "YouTube Monetization.jpg",
-  "AI AUTOMATION": "AI AUTOMATION.jpg",
+  "AI AUTOMATION": "AI Automation.jpg",
   "AI LAB (LOCAL LLM, PRODUCT & AGENTS)": "AI Lab.jpg",
   "GENAI FOR ACADEMIC": "Gen AI for Academic.jpg",
   "VIBE CODING & APP BUILDING": "Vibe Coding & App Building.jpg",
