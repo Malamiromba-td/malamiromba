@@ -4,7 +4,7 @@ import PageShell from "@/components/PageShell";
 import CardGrid from "@/components/CardGrid";
 import { getCourses } from "@/lib/data/courses";
 import { Course } from "@/lib/types";
-import { COURSE_IMAGES } from "@/lib/data/course-images";
+import { getCourseImage } from "@/lib/data/course-images";
 
 export const metadata = {
   title: "AI Courses | Ibrahim Malamiromba",
@@ -69,7 +69,7 @@ export default async function CoursesPage() {
                 href: getCourseHref(course),
                // imageUrl: course.imageUrl || "/malamiromba-headshot.jpg",
                 imageUrl:
-  imageLookup.get(normalizeImageName(course.title)) ??
+  getCourseImage(course.title)) ??
   "/malamiromba-headshot.jpg",
                 meta:
                   [course.level, course.duration]
