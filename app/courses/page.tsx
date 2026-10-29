@@ -28,7 +28,7 @@ function getCourseHref(course: Course) {
 }
 
 
-function normalizeImageName(value: string): string {
+/*function normalizeImageName(value: string): string {
   return value
     .replace(/\.jpg$/i, "")
     .normalize("NFKD")
@@ -43,7 +43,7 @@ const imageLookup = new Map(
     normalizeImageName(filename),
     `/${encodeURIComponent(filename)}`,
   ]),
-);
+);*/
 
 export default async function CoursesPage() {
   const courses = await getCourses();
