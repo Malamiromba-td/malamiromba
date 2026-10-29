@@ -72,10 +72,10 @@ export default function AboutPage() {
               />
             </div>
 
-            <ImagePlaceholder
+            { /* <ImagePlaceholder
               label="[ teaching / community photo ]"
               className="aspect-[4/3] w-full"
-            />
+            />*/}
           </div>
         </section>
 
