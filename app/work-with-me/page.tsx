@@ -150,9 +150,7 @@ const waysToWork: Way[] = [
 export default function WorkWithMePage() {
   return (
     {/*<main className="min-h-screen bg-cream px-5 py-10 sm:px-8 sm:py-14 lg:px-10 lg:py-16">*/}
-     <PageShell
-          title="Work With Me"
-     >
+     <PageShell title="Work With Me">
       <div className="mx-auto max-w-6xl">
         {/* Header */}
         <header className="max-w-3xl">
