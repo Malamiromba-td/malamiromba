@@ -89,7 +89,7 @@ export default async function CoursesPage() {
                 className="inline-flex items-center gap-2 text-ochre underline"
               >
                 Explore TathSchool
-                <span aria-hidden="true">↗</span>
+                {/*<span aria-hidden="true">↗</span>*/}
               </Link>
             </div>
           )}
@@ -115,7 +115,7 @@ export default async function CoursesPage() {
             className="mt-7 inline-flex min-h-12 items-center gap-3 border border-ochre px-5 py-3 font-sans text-sm font-medium text-ochre transition-colors hover:bg-ochre hover:text-[#171109]"
           >
             Explore TathSchool
-            <span aria-hidden="true">↗</span>
+            {/*<span aria-hidden="true">↗</span>*/}
           </Link>
         </section>
       </div>
