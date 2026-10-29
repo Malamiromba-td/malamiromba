@@ -185,7 +185,7 @@ export default function VideosPage() {
             className="mt-2 inline-flex items-center gap-2 font-display text-xl font-bold uppercase transition-colors hover:text-[#598f8b] sm:text-2xl"
           >
             My YouTube Channel
-            <span aria-hidden="true">↗</span>
+            {/*<span aria-hidden="true">↗</span>*/}
           </Link>
         </div>
       </section>
