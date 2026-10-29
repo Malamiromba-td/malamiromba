@@ -1,5 +1,6 @@
 import Link from "next/link";
 import type { ReactNode } from "react";
+import PageShell from "@/components/PageShell";
 
 export const metadata = {
   title: "Work With Me | Ibrahim Malamiromba",
@@ -148,7 +149,10 @@ const waysToWork: Way[] = [
 
 export default function WorkWithMePage() {
   return (
-    <main className="min-h-screen bg-cream px-5 py-10 sm:px-8 sm:py-14 lg:px-10 lg:py-16">
+    {/*<main className="min-h-screen bg-cream px-5 py-10 sm:px-8 sm:py-14 lg:px-10 lg:py-16">*/}
+     <PageShell
+          title="Work With Me"
+     >
       <div className="mx-auto max-w-6xl">
         {/* Header */}
         <header className="max-w-3xl">
@@ -229,7 +233,8 @@ export default function WorkWithMePage() {
           <ArrowUpRightIcon className="h-6 w-6 shrink-0 text-ochre transition-transform duration-300 ease-out group-hover:-translate-y-1 group-hover:translate-x-1 motion-reduce:transform-none" />
         </Link>
       </div>
-    </main>
+    </PageShell>
+  {/*</main>*/}
   );
 }
 
