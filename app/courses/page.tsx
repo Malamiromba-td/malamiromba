@@ -68,9 +68,7 @@ export default async function CoursesPage() {
                 title: course.title,
                 href: getCourseHref(course),
                // imageUrl: course.imageUrl || "/malamiromba-headshot.jpg",
-                imageUrl:
-  getCourseImage(course.title)) ??
-  "/malamiromba-headshot.jpg",
+                imageUrl: getCourseImage(course.title),
                 meta:
                   [course.level, course.duration]
                     .filter(Boolean)
