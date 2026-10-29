@@ -49,6 +49,18 @@ function normalizeCourse(raw: Record<string, unknown>, index: number): Course {
   };
 }
 
+
+export function normalizeCourseImageName(value: string): string {
+  return value
+    .replace(/\.jpg$/i, "") // Remove file extension
+    .normalize("NFKD")
+    .replace(/[\u0300-\u036f]/g, "")
+    .toLowerCase()
+    .replace(/[^a-z0-9]+/g, " ")
+    .trim();
+}
+
+
 export async function getCourses(): Promise<Course[]> {
   const apiUrl = process.env.TATHSCHOOL_API_URL;
 

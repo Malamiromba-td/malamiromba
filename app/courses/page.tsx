@@ -4,66 +4,71 @@ import PageShell from "@/components/PageShell";
 import CardGrid from "@/components/CardGrid";
 import { getCourses } from "@/lib/data/courses";
 import { Course } from "@/lib/types";
+import { getCourseImage } from "@/lib/data/course-images";
 
 export const metadata = {
-  title: "Courses | Ibrahim Malamiromba",
+  title: "AI Courses | Ibrahim Malamiromba",
   description:
-    "Explore selected technology and AI courses taught through TathSchool.",
+    "Explore technology and artificial intelligence courses taught through TathSchool.",
 };
 
 const LMS_URL = "https://tath.school";
 
+function getCourseHref(course: Course) {
+  switch (course.programCode) {
+    case "ai-courses":
+      return `https://tath.school/ai-courses/${course.id}`;
+
+    case "tech-courses":
+      return `https://tath.school/tech-courses/${course.id}`;
+
+    default:
+      return `https://tath.school/courses/${course.id}`;
+  }
+}
+
+
+/*function normalizeImageName(value: string): string {
+  return value
+    .replace(/\.jpg$/i, "")
+    .normalize("NFKD")
+    .replace(/[\u0300-\u036f]/g, "")
+    .toLowerCase()
+    .replace(/[^a-z0-9]+/g, " ")
+    .trim();
+}
+
+const imageLookup = new Map(
+  COURSE_IMAGES.map((filename) => [
+    normalizeImageName(filename),
+    `/${encodeURIComponent(filename)}`,
+  ]),
+);*/
+
 export default async function CoursesPage() {
   const courses = await getCourses();
 
-  const featuredCourses = courses.slice(10, 11);
-
-  const getCourseHref = (course: Course) => {
-    switch (course.programCode) {
-      case "ai-courses":
-        return `https://tath.school/ai-courses/${course.id}`;
-
-      case "tech-courses":
-        return `https://tath.school/tech-courses/${course.id}`;
-
-      default:
-        return `https://tath.school/courses/${course.id}`;
-    }
-  };
+  // Display every course belonging to the AI courses programme.
+  const aiCourses = courses.filter(
+    (course) => course.programCode === "ai-courses",
+  );
 
   return (
     <PageShell
-      title="Courses"
-      intro=""
+      title="AI Courses"
+      intro="Explore courses on artificial intelligence and learn practical skills through TathSchool."
     >
       <div className="space-y-12">
-        {/* Featured courses */}
         <section>
-          {/* <div className="mb-6">
-            <p className="font-sans text-xs font-semibold uppercase tracking-[0.2em] text-ochre">
-              Selected learning
-            </p>
-
-            <h2 className="mt-3 font-display text-2xl font-bold text-ink sm:text-3xl">
-              Start learning
-            </h2>
-
-            <p className="mt-2 max-w-xl font-sans text-sm leading-6 text-muted">
-              A selection of courses available through TathSchool.
-              Visit the learning platform to explore more courses
-              and access the full learning experience.
-            </p>
-          </div>*/}
-
-          {featuredCourses.length > 0 ? (
+          {aiCourses.length > 0 ? (
             <CardGrid
-              items={featuredCourses.map((course) => ({
+              items={aiCourses.map((course) => ({
                 id: course.id,
-               // label: "Featured course"
                 label: "",
                 title: course.title,
                 href: getCourseHref(course),
-                imageUrl: "/malamiromba-headshot.jpg",
+               // imageUrl: course.imageUrl || "/malamiromba-headshot.jpg",
+                imageUrl: getCourseImage(course.title),
                 meta:
                   [course.level, course.duration]
                     .filter(Boolean)
@@ -72,15 +77,25 @@ export default async function CoursesPage() {
               }))}
             />
           ) : (
-            <p className="font-sans text-sm text-muted">
-              No featured courses are available right now. Visit
-              TathSchool to explore its learning programmes.
-            </p>
+            <div className="space-y-4">
+              <p className="font-sans text-sm text-muted">
+                No AI courses are available right now.
+              </p>
+
+              <Link
+                href={LMS_URL}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center gap-2 text-ochre underline"
+              >
+                Explore TathSchool
+                <span aria-hidden="true">↗</span>
+              </Link>
+            </div>
           )}
         </section>
 
-        {/* LMS CTA */}
-        <section className="">
+        <section>
           <p className="font-sans text-xs font-semibold uppercase tracking-[0.2em] text-ochre">
             Continue learning
           </p>
@@ -90,8 +105,7 @@ export default async function CoursesPage() {
           </h2>
 
           <p className="mt-4 max-w-xl font-sans text-sm leading-6 text-muted">
-            Discover more courses, view programme details, and
-            continue to TathSchool for the full learning experience.
+            Discover more courses and programmes on TathSchool.
           </p>
 
           <Link
@@ -108,51 +122,3 @@ export default async function CoursesPage() {
     </PageShell>
   );
 }
-
-/*
-import PageShell from "@/components/PageShell";
-import CardGrid from "@/components/CardGrid";
-import { getCourses } from "@/lib/data/courses";
-import { Course } from "@/lib/types";
-
-export const metadata = {
-  title: "Courses | Ibrahim Malamiromba",
-};
-
-export default async function CoursesPage() {
-  const courses = await getCourses();
-
-  const getCourseHref = (course: Course) => {
-    switch (course.programCode) {
-      case "ai-courses":
-        return `https://tath.school/ai-courses/${course.id}`;
-
-      case "tech-courses":
-        return `https://tath.school/tech-courses/${course.id}`;
-
-      default:
-        return `https://tath.school/courses/${course.id}`;
-    }
-  };
-
-  return (
-    <PageShell
-      title="Courses"
-      intro="Lessons taught through TathSchool, on tech and AI in plain Hausa."
-    >
-      <CardGrid
-        items={courses.map((c) => ({
-          id: c.id,
-          label: "Course",
-          title: c.title,
-          href: getCourseHref(c),
-          // imageUrl: c.imageUrl,
-          imageUrl: "/malamiromba-headshot.jpg",
-          meta: [c.level, c.duration].filter(Boolean).join(" · ") || undefined,
-          programCode: c.programCode,
-        }))}
-      />
-    </PageShell>
-  );
-}
-*/

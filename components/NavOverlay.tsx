@@ -4,10 +4,14 @@ import SocialRow from "./SocialRow";
 
 const navLinks = [
   { label: "About", href: "/about" },
-  { label: "Blog", href: "/blog" },
-  { label: "Books", href: "/books" },
+ // { label: "Blog", href: "/blog" },
+ // { label: "Books", href: "/books" },
   // { label: "Contact", href: "/contact" },
   { label: "Courses", href: "/courses" },
+  {
+  label: "Community",
+  href: "/about#community",
+  },
   { label: "Press Assets", href: "/press-asset" },
   // { label: "Services & Pricing", href: "/services" },
   { label: "Talks", href: "/talks" },
