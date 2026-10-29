@@ -56,14 +56,14 @@ export default function Hero() {
                 >
                   latest lesson
                 </a>{" "}
-                or read my{" "}
+                {/* or read my{" "}
                 <a
                   href="/blog"
                   className="text-ink underline decoration-ochre underline-offset-4 transition-colors hover:text-ochre"
                 >
                   latest post
                 </a>
-                .
+                .*/}
               </p>
             </div>
           </div>
