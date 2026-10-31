@@ -179,13 +179,13 @@ export default function VideosPage() {
           </p>
 
           <Link
-            href={socialLinks[3].href}
+            href={"https://youtube.com/@malam_iromba"}
             target="_blank"
             rel="noopener noreferrer"
             className="mt-2 inline-flex items-center gap-2 font-display text-xl font-bold uppercase transition-colors hover:text-[#598f8b] sm:text-2xl"
           >
             My YouTube Channel
-            <span aria-hidden="true">↗</span>
+            {/*<span aria-hidden="true">↗</span>*/}
           </Link>
         </div>
       </section>
