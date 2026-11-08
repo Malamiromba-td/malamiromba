@@ -2,14 +2,27 @@
 @tailwind components;
 @tailwind utilities;
 
+:root {
+  --brand-blue: #174EA6;
+  --brand-red: #D62828;
+  --brand-white: #FFFFFF;
+  --brand-navy: #102A43;
+  --brand-muted: #526579;
+  --brand-line: #DCE4EF;
+}
+
 html {
   scroll-behavior: smooth;
 }
 
 body {
-  /* background-color: #faf9f6; */
-  /* background-color: #F2EDE0; */
-  color: #16181d;
+  background-color: var(--brand-white);
+  color: var(--brand-navy);
+}
+
+::selection {
+  background-color: var(--brand-blue);
+  color: var(--brand-white);
 }
 
 @media (prefers-reduced-motion: reduce) {
