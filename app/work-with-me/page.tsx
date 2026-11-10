@@ -166,7 +166,6 @@ export default function WorkWithMePage() {
   return (
     <PageShell title="Work With Me">
       <div className="mx-auto max-w-6xl">
-        {/* Header */}
         <header className="max-w-3xl">
           <p className="font-sans text-xs font-medium uppercase tracking-[0.14em] text-ochre">
             Collaboration / 01—04
@@ -184,12 +183,11 @@ export default function WorkWithMePage() {
           </p>
         </header>
 
-        {/* Collaboration cards */}
         <div className="mt-8 grid grid-cols-1 gap-4 sm:mt-10 md:grid-cols-2 md:gap-5">
           {waysToWork.map((way) => (
             <article
               key={way.number}
-              className="group relative flex h-full flex-col rounded-2xl border border-[#eadfc8] bg-[#fffdf8] p-5 transition-all duration-300 ease-out hover:-translate-y-1 hover:border-ochre hover:shadow-[0_10px_30px_-12px_rgba(166,116,30,0.35)] focus-within:border-ochre motion-reduce:transition-none motion-reduce:hover:translate-y-0 sm:p-6 lg:p-7"
+              className="group relative flex h-full flex-col rounded-2xl border border-[#DCE4EF] bg-[#FFFFFF] p-5 transition-all duration-300 ease-out hover:-translate-y-1 hover:border-ochre hover:shadow-[0_10px_30px_-12px_rgba(214,40,40,0.18)] focus-within:border-ochre motion-reduce:transition-none motion-reduce:hover:translate-y-0 sm:p-6 lg:p-7"
             >
               <div className="flex items-center justify-between text-ochre">
                 <p className="font-sans text-xs font-medium uppercase tracking-[0.12em] sm:text-sm">
@@ -232,8 +230,7 @@ export default function WorkWithMePage() {
           ))}
         </div>
 
-        {/* Final call to action */}
-        <section className="mt-10 border-t border-[#e3d7bd] pt-8 sm:mt-12">
+        <section className="mt-10 border-t border-[#DCE4EF] pt-8 sm:mt-12">
           <div className="flex flex-col gap-5 sm:flex-row sm:items-center sm:justify-between">
             <div className="max-w-2xl">
               <p className="font-sans text-xs font-semibold uppercase tracking-[0.14em] text-ochre">
@@ -263,4 +260,4 @@ export default function WorkWithMePage() {
       </div>
     </PageShell>
   );
-}
+    }
