@@ -42,41 +42,24 @@ const socialLinks = [
     color: "#111111",
   },
   {
-  name: "LinkedIn",
-  href: "https://www.linkedin.com/in/malamiromba/",
-  handle: "Connect on LinkedIn",
-  Icon: Linkedin,
-  color: "#0A66C2",
-},
+    name: "LinkedIn",
+    href: "https://www.linkedin.com/in/malamiromba/",
+    handle: "Connect on LinkedIn",
+    Icon: Linkedin,
+    color: "#0A66C2",
+  },
 ];
 
 export default function VideosPage() {
   return (
-    <PageShell title="Videos" intro="Ideas, lessons, and conversations on technology,
-            professional growth, and the work that matters.
-          ">
-    {/* Page introduction */}
-      {/*
-      <section className="px-5 pb-10 pt-10 sm:px-8 sm:pb-14 sm:pt-16">
-        <div className="mx-auto max-w-6xl">
-          <p className="font-sans text-xs font-semibold uppercase tracking-[0.2em] text-[#598f8b]">
-            Watch & learn
-          </p>
-
-          <h1 className="mt-3 font-display text-4xl font-bold sm:text-5xl">
-            Videos
-          </h1>
-
-          <p className="mt-4 max-w-xl font-sans text-sm leading-7 text-neutral-600 sm:text-base">
-            Ideas, lessons, and conversations on technology,
-            professional growth, and the work that matters.
-          </p>
-        </div>
-      </section>*/}
-
+    <PageShell
+      title="Videos"
+      intro="Ideas, lessons, and conversations on technology,
+            professional growth, and the work that matters."
+    >
       {/* Featured YouTube video */}
       <section className="px-3 sm:px-8">
-        <div className="mx-auto max-w-6xl bg-[#d9eeeb] p-3 sm:p-5">
+        <div className="mx-auto max-w-6xl bg-[#EAF1FA] p-3 sm:p-5">
           <div className="aspect-video overflow-hidden bg-black">
             <iframe
               className="h-full w-full"
@@ -93,7 +76,7 @@ export default function VideosPage() {
             aria-hidden="true"
             className="flex justify-end overflow-hidden pt-3"
           >
-            <span className="font-sans text-xl font-black leading-none tracking-[-0.12em] text-[#598f8b] sm:text-3xl">
+            <span className="font-sans text-xl font-black leading-none tracking-[-0.12em] text-[#174EA6] sm:text-3xl">
               ◉◉◉◉◉◉◉◉◉◉◉◉
             </span>
           </div>
@@ -126,7 +109,7 @@ export default function VideosPage() {
                 target="_blank"
                 rel="noopener noreferrer"
                 aria-label={`${handle} — opens in a new tab`}
-                className="group flex min-h-40 flex-col items-center justify-center px-3 py-6 transition duration-200 hover:-translate-y-1 hover:border-[#598f8b] hover:bg-[#f0f8f7] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[#598f8b] sm:min-h-48 sm:py-8"
+                className="group flex min-h-40 flex-col items-center justify-center px-3 py-6 transition duration-200 hover:-translate-y-1 hover:border-[#174EA6] hover:bg-[#F4F7FC] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[#174EA6] sm:min-h-48 sm:py-8"
               >
                 <span
                   className="flex h-16 w-16 items-center justify-center rounded-full transition-transform duration-200 group-hover:scale-110 sm:h-20 sm:w-20"
@@ -145,16 +128,6 @@ export default function VideosPage() {
                     className="hidden sm:block"
                   />
                 </span>
-
-                {/*
-                <span className="mt-4 font-display text-base font-bold sm:text-lg">
-                  {name}
-                </span>
-
-                <span className="mt-1 text-center font-sans text-xs text-neutral-500">
-                  {handle}
-                </span>*/}
-
               </Link>
             ))}
           </div>
@@ -179,20 +152,19 @@ export default function VideosPage() {
           </p>
 
           <Link
-            href={"https://youtube.com/@malam_iromba"}
+            href="https://youtube.com/@malam_iromba"
             target="_blank"
             rel="noopener noreferrer"
-            className="mt-2 inline-flex items-center gap-2 font-display text-xl font-bold uppercase transition-colors hover:text-[#598f8b] sm:text-2xl"
+            className="mt-2 inline-flex items-center gap-2 font-display text-xl font-bold uppercase transition-colors hover:text-[#174EA6] sm:text-2xl"
           >
             My YouTube Channel
-            {/*<span aria-hidden="true">↗</span>*/}
           </Link>
         </div>
       </section>
     </PageShell>
   );
-}
-
+      }
+                  
 
 /*
 import PageShell from "@/components/PageShell";

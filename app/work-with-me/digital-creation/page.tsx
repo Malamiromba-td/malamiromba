@@ -1,4 +1,3 @@
-
 import Link from "next/link";
 
 export const metadata = {
@@ -251,7 +250,7 @@ export default function DigitalCreationPage() {
       </section>
 
       {/* Closing CTA */}
-      <section className="bg-[#171109] px-6 py-14 text-cream sm:px-10 sm:py-16">
+      <section className="bg-[#102A43] px-6 py-14 text-cream sm:px-10 sm:py-16">
         <div className="mx-auto flex max-w-5xl flex-col gap-6 sm:flex-row sm:items-center sm:justify-between">
           <div className="max-w-2xl">
             <p className="font-sans text-xs font-semibold uppercase tracking-[0.22em] text-ochre">
@@ -270,7 +269,7 @@ export default function DigitalCreationPage() {
 
           <Link
             href="/contact?inquiry=digital-creation"
-            className="inline-flex min-h-12 shrink-0 items-center justify-center gap-3 border border-ochre px-5 py-3 font-sans text-sm font-medium text-ochre transition-colors hover:bg-ochre hover:text-[#171109]"
+            className="inline-flex min-h-12 shrink-0 items-center justify-center gap-3 border border-ochre px-5 py-3 font-sans text-sm font-medium text-ochre transition-colors hover:bg-ochre hover:text-[#102A43]"
           >
             Start a project
             <span aria-hidden="true">→</span>
