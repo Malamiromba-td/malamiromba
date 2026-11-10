@@ -112,7 +112,7 @@ export default async function CoursesPage() {
             href={LMS_URL}
             target="_blank"
             rel="noopener noreferrer"
-            className="mt-7 inline-flex min-h-12 items-center gap-3 border border-ochre px-5 py-3 font-sans text-sm font-medium text-ochre transition-colors hover:bg-ochre hover:text-[#171109]"
+            className="mt-7 inline-flex min-h-12 items-center gap-3 border border-ochre px-5 py-3 font-sans text-sm font-medium text-ochre transition-colors hover:bg-ochre hover:text-[#102A43]"
           >
             Explore TathSchool
             {/*<span aria-hidden="true">↗</span>*/}
