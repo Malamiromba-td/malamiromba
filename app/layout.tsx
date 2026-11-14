@@ -4,16 +4,9 @@ import "./globals.css";
 import { Space_Grotesk, IBM_Plex_Sans } from "next/font/google";
 
 const displayFont = Space_Grotesk({
-  weight: ["500", "700"],
   subsets: ["latin"],
   variable: "--font-display",
 });
-
-// const displayFont = Archivo_Black({
-//   weight: "400",
-//   subsets: ["latin"],
-//   variable: "--font-display",
-// });
 
 const sansFont = IBM_Plex_Sans({
   weight: ["400", "500", "600", "700"],
@@ -47,21 +40,21 @@ export default function RootLayout({
   return (
     <html lang="en">
       <head>
-  <link
-    rel="preload"
-    as="image"
-    href="/001.JPG"
-    fetchPriority="high"
-    media="(min-width: 768px)"
-  />
-  <link
-    rel="preload"
-    as="image"
-    href="/img-1.png"
-    fetchPriority="high"
-    media="(max-width: 767px)"
-  />
-</head>
+        <link
+          rel="preload"
+          as="image"
+          href="/001.JPG"
+          fetchPriority="high"
+          media="(min-width: 768px)"
+        />
+        <link
+          rel="preload"
+          as="image"
+          href="/img-1.png"
+          fetchPriority="high"
+          media="(max-width: 767px)"
+        />
+      </head>
       <body
         className={`${displayFont.variable} ${sansFont.variable} font-sans`}
       >
